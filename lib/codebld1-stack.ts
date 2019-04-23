@@ -6,8 +6,6 @@ export class Codebld1Stack extends cdk.Stack {
     super(scope, id, props);
 
     // The code that defines your stack goes here
-    cdk.SecretValue
-
     new cb.Project(this, 'Learning-CDK-project', {
       environment: {buildImage: cb.LinuxBuildImage.UBUNTU_14_04_NODEJS_10_1_0}, //build environment with NodeJs
       source: new cb.GitHubSource({
